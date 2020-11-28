@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data></data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backg">
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/register"
+                android:textAllCaps="true"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/fsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRegister"
+                app:srcCompat="@drawable/rectangle_1593" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="10"
+                android:hint="Nama Anda"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="@+id/fsName"
+                app:layout_constraintEnd_toEndOf="@+id/fsName"
+                app:layout_constraintStart_toStartOf="@+id/fsName"
+                app:layout_constraintTop_toTopOf="@+id/fsName" />
+
+            <ImageView
+                android:id="@+id/fsPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fsName"
+                app:srcCompat="@drawable/rectangle_1593" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="10"
+                android:inputType="phone"
+                android:hint="Nomor Anda"
+                app:layout_constraintBottom_toBottomOf="@+id/fsPhone"
+                app:layout_constraintEnd_toEndOf="@+id/fsPhone"
+                app:layout_constraintStart_toStartOf="@+id/fsPhone"
+                app:layout_constraintTop_toTopOf="@+id/fsPhone" />
+
+            <ImageView
+                android:id="@+id/fsEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fsPhone"
+                app:srcCompat="@drawable/rectangle_1593" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:hint="Email Anda"
+                app:layout_constraintBottom_toBottomOf="@+id/fsEmail"
+                app:layout_constraintEnd_toEndOf="@+id/fsEmail"
+                app:layout_constraintStart_toStartOf="@+id/fsEmail"
+                app:layout_constraintTop_toTopOf="@+id/fsEmail" />
+
+            <ImageView
+                android:id="@+id/fsPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fsEmail"
+                app:srcCompat="@drawable/rectangle_1593" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/fsPassword"
+                app:layout_constraintEnd_toEndOf="@+id/fsPassword"
+                app:layout_constraintStart_toStartOf="@+id/fsPassword"
+                app:layout_constraintTop_toTopOf="@+id/fsPassword">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:ems="9"
+                    android:inputType="textPassword"
+                    android:hint="Password"/>
+
+                <ImageView
+                    android:id="@+id/btShowPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/view__1_" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/fsConfirmPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fsPassword"
+                app:srcCompat="@drawable/rectangle_1593" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/fsConfirmPassword"
+                app:layout_constraintEnd_toEndOf="@+id/fsConfirmPassword"
+                app:layout_constraintStart_toStartOf="@+id/fsConfirmPassword"
+                app:layout_constraintTop_toTopOf="@+id/fsConfirmPassword">
+
+                <EditText
+                    android:id="@+id/etConfirmPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:ems="9"
+                    android:hint="Ulangi Password"
+                    android:inputType="textPassword" />
+
+                <ImageView
+                    android:id="@+id/btShowConfirmPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/view__1_" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/btRegister"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fsConfirmPassword" />
+
+            <Button
+                android:id="@+id/btRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="73dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bt_regis_shape"
+                android:fontFamily="@font/open_sans_semibold"
+                android:paddingHorizontal="80dp"
+                android:text="@string/register"
+                android:textAllCaps="true"
+                android:textColor="@color/whiteBone"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fsConfirmPassword" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/tvBelumPunyaAkun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/sudah_punya_akun" />
+
+                <TextView
+                    android:id="@+id/linkedMasuk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/masuk"
+                    android:textColor="#136A59"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

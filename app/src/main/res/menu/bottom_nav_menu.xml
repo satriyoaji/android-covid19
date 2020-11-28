@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_time"
+        android:enabled="true"
+        app:itemHorizontalTranslationEnabled="false"
+        android:icon="@drawable/ic_time"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        app:itemHorizontalTranslationEnabled="false"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_user"
+        android:enabled="true"
+        app:itemHorizontalTranslationEnabled="false"
+        android:icon="@drawable/ic_user"
+        app:showAsAction="ifRoom"/>
+
+</menu>
