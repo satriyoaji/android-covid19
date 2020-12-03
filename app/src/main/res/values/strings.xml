@@ -1,10 +1,6 @@
 <resources>
-    <string name="app_name">Antrian Sehat</string>
-    <string name="login">Login</string>
-    <string name="register">Register</string>
-    <string name="logout">Logout</string>
-    <string name="sudah_punya_akun">Sudah punya akun?</string>
+    <string name="app_name">Covidata</string>
+    <string name="daftar">Daftar</string>
+    <string name="sudah_memiliki_akun">Sudah memiliki akun ?</string>
     <string name="masuk">Masuk</string>
-    <string name="belum_punya_akun">Belum punya akun?</string>
-    <string name="daftar_sekarang">Daftar Sekarang</string>
 </resources>
