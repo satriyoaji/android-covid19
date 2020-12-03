@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Covidata</string>
+    <!-- Login -->
     <string name="daftar">Daftar</string>
     <string name="sudah_memiliki_akun">Sudah memiliki akun ?</string>
     <string name="masuk">Masuk</string>
+
+    <!-- Register -->
+    <string name="register">Register</string>
+    <string name="sub_register">Masukan detai Register Anda untuk</string>
+    <string name="sub_register_2">mengakses akun</string>
 </resources>
