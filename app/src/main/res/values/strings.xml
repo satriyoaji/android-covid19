@@ -5,8 +5,12 @@
     <string name="sudah_memiliki_akun">Sudah memiliki akun ?</string>
     <string name="masuk">Masuk</string>
 
+    <!-- Login -->
+    <string name="login">Log in</string>
+    <string name="sub_login_register_1">Masukan detail data anda untuk</string>
+    <string name="sub_login_register_2">mengakses akun</string>
+
     <!-- Register -->
     <string name="register">Register</string>
-    <string name="sub_register">Masukan detai Register Anda untuk</string>
-    <string name="sub_register_2">mengakses akun</string>
+
 </resources>
