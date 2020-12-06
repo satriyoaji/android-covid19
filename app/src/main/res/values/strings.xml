@@ -12,5 +12,19 @@
 
     <!-- Register -->
     <string name="register">Register</string>
+    <string name="welcome">Welcome</string>
+    <string name="nama_saya">Nama Saya</string>
+    <string name="notes_user">Target Anda hari ini adalah menjaga pola pikir positif dan tersenyum kepada semua orang yang Anda temui.</string>
+    <string name="last_updated">Pembaruan terakhir pada 31-03-2020, 8:00 AM</string>
+    <string name="title_content">Data Covid-19 Indonesia</string>
+    <string name="sembuh_label">Sembuh</string>
+    <string name="nilai_sembuh">120</string>
+    <string name="positif_label">Positif</string>
+    <string name="nilai_positif">550</string>
+    <string name="nilai_perawatan">201</string>
+    <string name="perawatan_label">Perawatan</string>
+    <string name="nilai_meninggal">124</string>
+    <string name="meninggal_label">Meninggal</string>
+    <string name="label_gender">Total kasus berdasarkan gender</string>
 
 </resources>
