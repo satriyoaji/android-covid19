@@ -295,6 +295,29 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content" />
 
+          <FrameLayout
+              android:layout_marginTop="16dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <ProgressBar
+                  android:layout_marginHorizontal="10dp"
+                  android:id="@+id/pb_persentase_gender"
+                  style="@android:style/Widget.Material.ProgressBar.Horizontal"
+                  android:maxHeight="24dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:progress="65"/>
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text=""
+                  android:layout_centerVertical="true" />
+            </RelativeLayout>
+          </FrameLayout>
+
           <androidx.constraintlayout.widget.ConstraintLayout
               android:layout_width="match_parent"
               android:layout_height="match_parent"
