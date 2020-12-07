@@ -33,18 +33,18 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
     private void initView(){
         binding.btLogin.setOnClickListener(this);
-        binding.btShowPassword.setOnClickListener(this);
-        binding.linkedDaftar.setOnClickListener(this);
+        //binding.btShowPassword.setOnClickListener(this);
+        //binding.linkedDaftar.setOnClickListener(this);
     }
 
     @Override
     public void startLoading() {
-        binding.progressBar.setVisibility(View.VISIBLE);
+        //binding.progressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void endLoading() {
-        binding.progressBar.setVisibility(View.GONE);
+        //binding.progressBar.setVisibility(View.GONE);
     }
 
     @Override
@@ -64,10 +64,6 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
     public void onClick(View v) {
         if(v.getId() == binding.btLogin.getId()){
             onButtonLoginClick();
-        }else if(v.getId() == binding.btShowPassword.getId()){
-            onButtonShowPasswordClick();
-        }else if(v.getId() == binding.linkedDaftar.getId()){
-            onLinkedDaftarClick();
         }
     }
 

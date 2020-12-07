@@ -3,22 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_time"
+        android:id="@+id/bbHome"
+        android:icon="@drawable/iphone_8_plus__tab_bar"
         android:enabled="true"
-        app:itemHorizontalTranslationEnabled="false"
-        android:icon="@drawable/ic_time"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"
+        android:title="home" />
     <item
-        android:id="@+id/action_home"
+        android:id="@+id/bbUser"
+        android:icon="@drawable/icons__user"
         android:enabled="true"
-        app:itemHorizontalTranslationEnabled="false"
-        android:icon="@drawable/ic_home"
-        app:showAsAction="ifRoom"/>
-    <item
-        android:id="@+id/action_user"
-        android:enabled="true"
-        app:itemHorizontalTranslationEnabled="false"
-        android:icon="@drawable/ic_user"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"
+        android:title="user" />
 
 </menu>

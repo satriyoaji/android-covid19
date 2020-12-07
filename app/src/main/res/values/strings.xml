@@ -13,6 +13,8 @@
     <!-- Register -->
     <string name="register">Register</string>
     <string name="welcome">Welcome</string>
+
+    <!-- Home -->
     <string name="nama_saya">Nama Saya</string>
     <string name="notes_user">Target Anda hari ini adalah menjaga pola pikir positif dan tersenyum kepada semua orang yang Anda temui.</string>
     <string name="last_updated">Pembaruan terakhir pada 31-03-2020, 8:00 AM</string>
@@ -26,5 +28,10 @@
     <string name="nilai_meninggal">124</string>
     <string name="meninggal_label">Meninggal</string>
     <string name="label_gender">Total kasus berdasarkan gender</string>
+    <string name="title_activity_province_maps">Map</string>
+    <string name="title_activity_asd">Map</string>
+
+    <!-- Province Map -->
+    <string name="rekap_kasus_hari_ini">Rekap Kasus Hari ini di Indonesia</string>
 
 </resources>
