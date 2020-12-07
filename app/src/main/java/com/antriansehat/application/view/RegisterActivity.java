@@ -38,19 +38,19 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
 
     private void initView(){
         binding.btRegister.setOnClickListener(this);
-        binding.btShowPassword.setOnClickListener(this);
-        binding.btShowConfirmPassword.setOnClickListener(this);
-        binding.linkedMasuk.setOnClickListener(this);
+        //binding.btShowPassword.setOnClickListener(this);
+        //binding.btShowConfirmPassword.setOnClickListener(this);
+        //binding.linkedMasuk.setOnClickListener(this);
     }
 
     @Override
     public void startLoading() {
-        binding.progressBar.setVisibility(View.VISIBLE);
+        //binding.progressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void endLoading() {
-        binding.progressBar.setVisibility(View.GONE);
+        //binding.progressBar.setVisibility(View.GONE);
     }
 
     @Override
@@ -75,12 +75,6 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
     public void onClick(View view) {
         if(view.getId() == binding.btRegister.getId()){
             onButtonRegisterClick();
-        }else if(view.getId() == binding.btShowPassword.getId()){
-            onButtonShowPasswordClick();
-        }else if(view.getId() == binding.btShowConfirmPassword.getId()){
-            onButtonShowConfirmPasswordClick();
-        }else if(view.getId() == binding.linkedMasuk.getId()){
-            onLinkedMasukClick();
         }
     }
 
@@ -113,7 +107,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
     public void onButtonRegisterClick(){
         presenter.register(
                 binding.etName.getText().toString(),
-                binding.etPhone.getText().toString(),
+                "Phone",
                 binding.etEmail.getText().toString(),
                 binding.etPassword.getText().toString(),
                 binding.etConfirmPassword.getText().toString()
