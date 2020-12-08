@@ -28,12 +28,47 @@
     <string name="nilai_meninggal">124</string>
     <string name="meninggal_label">Meninggal</string>
     <string name="label_gender">Total kasus berdasarkan gender</string>
-    <string name="title_activity_province_maps">Map</string>
-    <string name="title_activity_asd">Map</string>
 
     <!-- Province Map -->
+    <string name="title_activity_province_maps">Map</string>
     <string name="rekap_kasus_hari_ini">Rekap Kasus Hari ini di Indonesia</string>
     <string name="daftar_link">Belum punya akun ?</string>
     <string name="login_link">Sudah punya akun ?</string>
 
+    <!-- Profile -->
+    <string name="akun">Akun</string>
+    <string name="name_profile">Rifqi Fajar R</string>
+    <string name="status_profile">Status: Self-isolation</string>
+    <string name="email_label">Email</string>
+    <string name="email">rifqifajar@gmail.com</string>
+    <string name="alamat_label">Alamat</string>
+    <string name="alamat">Gg. Melati Desa. Gampeng RT/RW 04/01 Kabupaten Kediri Jawa Timur</string>
+    <string name="profile_label">Profile</string>
+    <string name="profile">Target Anda hari ini adalah menjaga pola pikir positif dan tersenyum kepada semua orang yang anda temui.</string>
+
+    <!-- Detail Provinsi -->
+    <string name="data_covid">Data Covid</string>
+    <string name="pilih_provinsi">Pilih Provinsi</string>
+    <string-array name="province_list">
+        <item>Jawa Timur</item>
+        <item>Jawa Tengah</item>
+        <item>Jawa Barat</item>
+    </string-array>
+    <string-array name="hospital_list">
+        <item>RS. Bhayangkara</item>
+        <item>RS. Baptis</item>
+        <item>RS. Sunda</item>
+    </string-array>
+
+
+    <!-- Rumah Sakit -->
+    <string name="title_activity_hospital">Map</string>
+    <string name="rumah_sakit">Rumah Sakit</string>
+    <string name="nama_rs">RS Sunda</string>
+    <string name="nomor_telp_label">Nomor Telp</string>
+    <string name="nomor_telp">0354776</string>
+    <string name="kota_kabupaten_label">Kota / Kabupaten</string>
+    <string name="kota_kabupaten">Bandung</string>
+    <string name="provinsi_label">Provinsi</string>
+    <string name="provinsi">Jawa Barat</string>
 </resources>
