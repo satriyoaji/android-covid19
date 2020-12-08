@@ -104,7 +104,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="@string/positif_label"
-                        android:textColor="@color/soft_green"
+                        android:textColor="@color/soft_cyan"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -129,7 +129,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="@string/sembuh_label"
-                        android:textColor="@color/soft_green"
+                        android:textColor="@color/soft_cyan"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -154,7 +154,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="@string/meninggal_label"
-                        android:textColor="@color/soft_green"
+                        android:textColor="@color/soft_cyan"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -179,7 +179,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="@string/perawatan_label"
-                        android:textColor="@color/soft_green"
+                        android:textColor="@color/soft_cyan"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -206,6 +206,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        map:fabCradleMargin="10dp"
         android:background="@color/white"
         android:backgroundTint="@color/white">
 

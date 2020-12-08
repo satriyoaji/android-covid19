@@ -19,5 +19,9 @@
 
     <color name="white">#FFFFFF</color>
     <color name="dark_blue">#205072</color>
+    <color name="soft_cyan">#5AC7AA</color>
     <color name="soft_green">#68B2A0</color>
+    <color name="soft_green_light">#E4F0DF</color>
+    <color name="gray_background_profile">#F5F5F5</color>
+    <color name="dark_gray">#3C3C3C</color>
 </resources>
