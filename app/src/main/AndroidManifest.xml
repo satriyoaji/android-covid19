@@ -33,16 +33,18 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".view.HospitalActivity"
+            android:label="@string/title_activity_hospital"></activity>
+        <activity
             android:name=".view.ProvinceMapsActivity"
-            android:label="@string/title_activity_province_maps">
-
-        </activity>
+            android:label="@string/title_activity_province_maps"></activity>
         <activity android:name=".view.HomeActivity" />
         <activity android:name=".view.ListBookActivity" />
         <activity android:name=".view.RegisterActivity" />
         <activity android:name=".view.LoginActivity" />
-        <activity
-            android:name=".view.ProfileActivity">
+        <activity android:name=".view.ProfileActivity" />
+        <activity android:name=".view.DetailProvinceActivity" />
+        <activity android:name=".view.HospitalActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
