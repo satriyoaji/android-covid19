@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "786743466254",
+    "project_id": "covidata-a4378",
+    "storage_bucket": "covidata-a4378.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786743466254:android:18467dd5a0032d7a439f5f",
+        "android_client_info": {
+          "package_name": "com.covidata.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786743466254-migcgc44v2r14aq6vjpgev5d22hdhqv6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg44t3rs5oKfN365mJG2SdwSkS0TSAn4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786743466254-migcgc44v2r14aq6vjpgev5d22hdhqv6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -33,5 +33,7 @@
 
     <!-- Province Map -->
     <string name="rekap_kasus_hari_ini">Rekap Kasus Hari ini di Indonesia</string>
+    <string name="daftar_link">Belum punya akun ?</string>
+    <string name="login_link">Sudah punya akun ?</string>
 
 </resources>
