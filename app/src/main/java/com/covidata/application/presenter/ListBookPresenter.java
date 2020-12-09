@@ -19,10 +19,15 @@ public class ListBookPresenter implements ListBookContract.Presenter {
     public void requestListBook() {
         view.startLoading();
         interactor.requestListBook(new RequestCallback<List<Book>>() {
+//            @Override
+//            public void requestSuccess(List<Book> data) {
+//                view.endLoading();
+//                view.showListBook(data);
+//            }
+
             @Override
-            public void requestSuccess(List<Book> data) {
-                view.endLoading();
-                view.showListBook(data);
+            public void requestSucceded(String docId) {
+
             }
 
             @Override

@@ -29,7 +29,7 @@ public class LoginInteractor implements LoginContract.Interactor {
                             requestCallback.requestFailed("Null Response");
                         }
                         else if(response.success){
-                            requestCallback.requestSuccess(response);
+//                            requestCallback.requestSuccess(response);
                         }
                         else {
                             requestCallback.requestFailed(response.message);

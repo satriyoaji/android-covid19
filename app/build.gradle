@@ -9,7 +9,7 @@ android {
         enabled = true
     }
     defaultConfig {
-        applicationId "com.antriansehat.android_example"
+        applicationId "com.covidata.application"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1

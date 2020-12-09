@@ -67,7 +67,7 @@
             <LinearLayout
                 android:id="@+id/layoutNama"
                 android:layout_width="312dp"
-                android:layout_height="75dp"
+                android:layout_height="68dp"
                 android:layout_marginTop="24dp"
                 android:background="@drawable/form_input"
                 android:elevation="25dp"
@@ -94,7 +94,7 @@
             <LinearLayout
                 android:id="@+id/layoutEmail"
                 android:layout_width="312dp"
-                android:layout_height="75dp"
+                android:layout_height="68dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/form_input"
                 android:elevation="25dp"
@@ -121,7 +121,7 @@
             <LinearLayout
                 android:id="@+id/layoutPassword"
                 android:layout_width="312dp"
-                android:layout_height="75dp"
+                android:layout_height="68dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/form_input"
                 android:elevation="25dp"
@@ -154,7 +154,7 @@
             <LinearLayout
                 android:id="@+id/layoutConfirmPassword"
                 android:layout_width="312dp"
-                android:layout_height="75dp"
+                android:layout_height="68dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/form_input"
                 android:elevation="25dp"
@@ -184,10 +184,21 @@
 
             </LinearLayout>
 
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/btRegister"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutConfirmPassword" />
+
             <Button
-                android:id="@+id/bt_register"
+                android:id="@+id/btRegister"
                 android:layout_width="266dp"
-                android:layout_height="55dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="50dp"
                 android:background="@drawable/group_7"
@@ -199,7 +210,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutConfirmPassword" />
+                app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
         <TextView
             android:id="@+id/tv_to_login"
@@ -212,9 +223,9 @@
             android:textSize="13sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@id/bt_register"
+            app:layout_constraintStart_toEndOf="@id/btRegister"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bt_register" />
+            app:layout_constraintTop_toBottomOf="@+id/btRegister" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

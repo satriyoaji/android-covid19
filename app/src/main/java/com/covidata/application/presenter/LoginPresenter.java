@@ -19,11 +19,16 @@ public class LoginPresenter implements LoginContract.Presenter {
     public void login(String username, String password) {
         view.startLoading();
         interactor.requestLogin(username, password, new RequestCallback<LoginResponse>() {
+//            @Override
+//            public void requestSuccess(LoginResponse data) {
+//                view.endLoading();
+//                view.loginSuccess(data.message);
+//                interactor.saveToken(data.access_token);
+//            }
+
             @Override
-            public void requestSuccess(LoginResponse data) {
-                view.endLoading();
-                view.loginSuccess(data.message);
-                interactor.saveToken(data.access_token);
+            public void requestSucceded(String docId) {
+
             }
 
             @Override
