@@ -15,7 +15,9 @@ import com.covidata.application.databinding.ActivityRegisterBinding;
 import com.covidata.application.interactor.RegisterInteractor;
 import com.covidata.application.presenter.RegisterPresenter;
 import com.covidata.application.util.UtilProvider;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,6 +29,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
     private boolean isShowPassword = false;
     private boolean isShowConfirmPassword = false;
 //    private FirebaseAuth mFirebaseAuth;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,19 +43,27 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
 
     private void initView(){
         binding.btRegister.setOnClickListener(this);
-        //binding.btShowPassword.setOnClickListener(this);
-        //binding.btShowConfirmPassword.setOnClickListener(this);
+        binding.ivEyePassword.setOnClickListener(this);
+        binding.ivEyeConfirmPassword.setOnClickListener(this);
         binding.tvToLogin.setOnClickListener(this);
     }
 
     @Override
     public void startLoading() {
-        //binding.progressBar.setVisibility(View.VISIBLE);
+        binding.btRegister.setEnabled(false);
+        binding.progressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void endLoading() {
-        //binding.progressBar.setVisibility(View.GONE);
+        binding.progressBar.setVisibility(View.GONE);
+        binding.btRegister.setEnabled(true);
+    }
+
+    @Override
+    public void passwordNotMatch() {
+        Toast.makeText(getApplicationContext(), "Password and it's confirmation doesn't match",
+                Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -79,6 +90,10 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
             onButtonRegisterClick();
         }else if(view.getId() == binding.tvToLogin.getId()){
             onLinkedMasukClick();
+        }else if(view.getId() == binding.ivEyePassword.getId()){
+            onButtonShowPasswordClick();
+        }else if(view.getId() == binding.ivEyeConfirmPassword.getId()){
+            onButtonShowConfirmPasswordClick();
         }
     }
 
@@ -110,11 +125,11 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
 
     public void onButtonRegisterClick(){
         presenter.register(
-                binding.etName.getText().toString(),
-                "Phone",
-                binding.etEmail.getText().toString(),
-                binding.etPassword.getText().toString(),
-                binding.etConfirmPassword.getText().toString()
+            db,
+            binding.etName.getText().toString(),
+            binding.etEmail.getText().toString(),
+            binding.etPassword.getText().toString(),
+            binding.etConfirmPassword.getText().toString()
         );
     }
 }

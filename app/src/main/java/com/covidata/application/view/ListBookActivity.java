@@ -8,13 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.antriansehat.application.adapter.ListBookAdapter;
-import com.antriansehat.application.contract.ListBookContract;
-import com.antriansehat.application.databinding.ActivityListBookBinding;
-import com.antriansehat.application.interactor.ListBookInteractor;
-import com.antriansehat.application.model.Book;
-import com.antriansehat.application.presenter.ListBookPresenter;
-import com.antriansehat.application.util.UtilProvider;
+import com.covidata.application.contract.ListBookContract;
+import com.covidata.application.databinding.ActivityListBookBinding;
+import com.covidata.application.interactor.ListBookInteractor;
+import com.covidata.application.model.Book;
+import com.covidata.application.presenter.ListBookPresenter;
+import com.covidata.application.util.UtilProvider;
 
 import java.util.List;
 

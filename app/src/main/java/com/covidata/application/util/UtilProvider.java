@@ -3,15 +3,13 @@ package com.covidata.application.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.antriansehat.application.constant.SqliteConstant;
-
 public class UtilProvider {
     private static SharedPreferencesUtil sharedPreferencesUtil;
     private static SqliteUtil sqliteUtil;
 
     public static void initialize(Context context){
         initSharedPreferencesUtil(context);
-        initSqliteUtil(context);
+//        initSqliteUtil(context);
     }
 
     private static void initSharedPreferencesUtil(Context context){
@@ -19,9 +17,9 @@ public class UtilProvider {
         sharedPreferencesUtil = new SharedPreferencesUtil(sharedPreferences);
     }
 
-    private static void initSqliteUtil(Context context){
-        sqliteUtil = new SqliteUtil(context, SqliteConstant.DATABASE_NAME, null, SqliteConstant.DATABASE_VERSION);
-    }
+//    private static void initSqliteUtil(Context context){
+//        sqliteUtil = new SqliteUtil(context, SqliteConstant.DATABASE_NAME, null, SqliteConstant.DATABASE_VERSION);
+//    }
 
     public static SharedPreferencesUtil getSharedPreferencesUtil(){
         return sharedPreferencesUtil;

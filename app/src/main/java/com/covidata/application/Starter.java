@@ -2,8 +2,8 @@ package com.covidata.application;
 
 import android.app.Application;
 
-import com.antriansehat.application.util.UtilProvider;
 import com.androidnetworking.AndroidNetworking;
+import com.covidata.application.util.UtilProvider;
 
 // Set this class to android:name in AndroidManifest.xml at application tag
 public class Starter extends Application {
