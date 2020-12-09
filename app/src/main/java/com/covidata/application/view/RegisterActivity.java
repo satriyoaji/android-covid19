@@ -26,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
     private ActivityRegisterBinding binding;
     private boolean isShowPassword = false;
     private boolean isShowConfirmPassword = false;
-    private FirebaseAuth mFirebaseAuth;
+//    private FirebaseAuth mFirebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
