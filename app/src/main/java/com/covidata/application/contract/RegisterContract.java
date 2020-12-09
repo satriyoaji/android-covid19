@@ -8,16 +8,17 @@ public interface RegisterContract {
     interface View {
         void startLoading();
         void endLoading();
+        void passwordNotMatch();
         void registerSuccess(String message);
         void registerFailed(String message);
     }
 
     interface Presenter {
-        void register(String name, String phone, String email, String password, String confirmPassword);
+        void register(String name, String email, String password, String confirmPassword);
     }
 
     interface Interactor {
-        void requestRegister(String name, String phone, String email, String password, String confirmPassword, RequestCallback<RegisterResponse> requestCallback);
+        void requestRegister(String name, String email, String password, String confirmPassword, RequestCallback<RegisterResponse> requestCallback);
         void saveToken(String token);
     }
 }

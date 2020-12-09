@@ -16,6 +16,7 @@ import com.covidata.application.interactor.RegisterInteractor;
 import com.covidata.application.presenter.RegisterPresenter;
 import com.covidata.application.util.UtilProvider;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -53,6 +54,12 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
     @Override
     public void endLoading() {
         //binding.progressBar.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void passwordNotMatch() {
+        Toast.makeText(getApplicationContext(), "Password and it's confirmation doesn't match",
+                Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -110,11 +117,10 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
 
     public void onButtonRegisterClick(){
         presenter.register(
-                binding.etName.getText().toString(),
-                "Phone",
-                binding.etEmail.getText().toString(),
-                binding.etPassword.getText().toString(),
-                binding.etConfirmPassword.getText().toString()
+            binding.etName.getText().toString(),
+            binding.etEmail.getText().toString(),
+            binding.etPassword.getText().toString(),
+            binding.etConfirmPassword.getText().toString()
         );
     }
 }

@@ -18,21 +18,27 @@ public class RegisterPresenter implements RegisterContract.Presenter{
     }
 
     @Override
-    public void register(String name, String phone, String email, String password, String confirmPassword) {
+    public void register(String name, String email, String password, String confirmPassword) {
         view.startLoading();
-        interactor.requestRegister(name, phone, email, password, confirmPassword, new RequestCallback<RegisterResponse>() {
-            @Override
-            public void requestSuccess(RegisterResponse data) {
-                view.endLoading();
-                view.registerSuccess(data.message);
-                interactor.saveToken(data.access_token);
-            }
 
-            @Override
-            public void requestFailed(String errorMessage) {
-                view.endLoading();
-                view.registerFailed(errorMessage);
-            }
-        });
+        if (password == confirmPassword){
+            interactor.requestRegister(name, email, password, confirmPassword, new RequestCallback<RegisterResponse>() {
+                @Override
+                public void requestSuccess(RegisterResponse data) {
+                    view.endLoading();
+                    view.registerSuccess(data.message);
+                    interactor.saveToken(data.access_token);
+                }
+
+                @Override
+                public void requestFailed(String errorMessage) {
+                    view.endLoading();
+                    view.registerFailed(errorMessage);
+                }
+            });
+        }else{
+            view.passwordNotMatch();
+        }
+
     }
 }

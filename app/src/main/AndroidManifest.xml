@@ -37,11 +37,10 @@
         <activity android:name=".view.HomeActivity" />
         <activity android:name=".view.ListBookActivity" />
         <activity android:name=".view.RegisterActivity" />
-        <activity android:name=".view.LoginActivity" />
+        <activity android:name=".view.HospitalActivity" />
         <activity android:name=".view.ProfileActivity" />
         <activity android:name=".view.DetailProvinceActivity" />
-        <activity android:name=".view.HospitalActivity"
-            android:label="@string/title_activity_hospital">
+        <activity android:name=".view.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
