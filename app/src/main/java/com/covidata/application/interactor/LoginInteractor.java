@@ -1,15 +1,13 @@
 package com.covidata.application.interactor;
 
-import android.util.Log;
-
+import com.androidnetworking.AndroidNetworking;
+import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.covidata.application.api_response.LoginResponse;
 import com.covidata.application.callback.RequestCallback;
 import com.covidata.application.constant.ApiConstant;
 import com.covidata.application.contract.LoginContract;
 import com.covidata.application.util.SharedPreferencesUtil;
-import com.androidnetworking.AndroidNetworking;
-import com.androidnetworking.error.ANError;
-import com.androidnetworking.interfaces.ParsedRequestListener;
 
 public class LoginInteractor implements LoginContract.Interactor {
     private SharedPreferencesUtil sharedPreferencesUtil;

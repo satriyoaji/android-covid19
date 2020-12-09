@@ -1,16 +1,17 @@
 package com.covidata.application.interactor;
 
+import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
-import com.covidata.application.api_response.LoginResponse;
 import com.covidata.application.api_response.RegisterResponse;
 import com.covidata.application.callback.RequestCallback;
 import com.covidata.application.constant.ApiConstant;
 import com.covidata.application.contract.RegisterContract;
 import com.covidata.application.util.SharedPreferencesUtil;
+import com.google.android.gms.common.util.SharedPreferencesUtils;
 
 import static android.content.ContentValues.TAG;
 

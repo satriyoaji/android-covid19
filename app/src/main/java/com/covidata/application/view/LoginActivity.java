@@ -9,8 +9,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.antriansehat.application.databinding.ActivityLoginBinding;
 import com.covidata.application.contract.LoginContract;
+import com.covidata.application.databinding.ActivityLoginBinding;
 import com.covidata.application.interactor.LoginInteractor;
 import com.covidata.application.presenter.LoginPresenter;
 import com.covidata.application.util.UtilProvider;
