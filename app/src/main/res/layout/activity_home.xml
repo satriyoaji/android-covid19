@@ -302,7 +302,7 @@
               <ProgressBar
                   android:layout_marginHorizontal="10dp"
                   android:id="@+id/pb_persentase_gender"
-                  style="@android:style/Widget.Material.ProgressBar.Horizontal"
+                  style="@android:style/Widget.Holo.ProgressBar.Horizontal"
                   android:maxHeight="24dp"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
