@@ -26,13 +26,14 @@ import static android.content.ContentValues.TAG;
 
 public class RegisterInteractor implements RegisterContract.Interactor{
     private SharedPreferencesUtil sharedPreferencesUtil;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     public RegisterInteractor(SharedPreferencesUtil sharedPreferencesUtil) {
         this.sharedPreferencesUtil = sharedPreferencesUtil;
     }
 
     @Override
-    public void requestRegister(FirebaseFirestore db, String name, String email, String password, String confirmPassword,
+    public void requestRegister(String name, String email, String password, String confirmPassword,
                                 final RequestCallback<RegisterResponse> requestCallback) {
 
         Map<String, Object> user = new HashMap<>();
