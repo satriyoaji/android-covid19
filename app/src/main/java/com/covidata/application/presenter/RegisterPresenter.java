@@ -20,10 +20,10 @@ public class RegisterPresenter implements RegisterContract.Presenter{
     }
 
     @Override
-    public void register(FirebaseFirestore db, String name, String email, String password, String confirmPassword) {
+    public void register(String name, String email, String password, String confirmPassword) {
         view.startLoading();
         if (password.equals(confirmPassword)){
-            interactor.requestRegister(db, name, email, bcryptPassword(password), confirmPassword, new RequestCallback<RegisterResponse>() {
+            interactor.requestRegister(name, email, bcryptPassword(password), confirmPassword, new RequestCallback<RegisterResponse>() {
                 @Override
                 public void requestSucceded(String docId) {
                     Log.d("doc id: ", docId);

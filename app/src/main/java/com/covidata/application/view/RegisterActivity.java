@@ -28,8 +28,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
     private ActivityRegisterBinding binding;
     private boolean isShowPassword = false;
     private boolean isShowConfirmPassword = false;
-//    private FirebaseAuth mFirebaseAuth;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+//    private FirebaseAuth mFirebaseAuth;=
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,7 +124,6 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
 
     public void onButtonRegisterClick(){
         presenter.register(
-            db,
             binding.etName.getText().toString(),
             binding.etEmail.getText().toString(),
             binding.etPassword.getText().toString(),
