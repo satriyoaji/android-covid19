@@ -14,6 +14,7 @@ import com.covidata.application.databinding.ActivityLoginBinding;
 import com.covidata.application.interactor.LoginInteractor;
 import com.covidata.application.presenter.LoginPresenter;
 import com.covidata.application.util.UtilProvider;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class LoginActivity extends AppCompatActivity implements LoginContract.View, View.OnClickListener {
     private LoginContract.Presenter presenter;
@@ -32,7 +33,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
     private void initView(){
         binding.btLogin.setOnClickListener(this);
-        //binding.btShowPassword.setOnClickListener(this);
+        binding.ivEyePassword.setOnClickListener(this);
         binding.tvToRegister.setOnClickListener(this);
     }
 
@@ -65,6 +66,8 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
             onButtonLoginClick();
         }else if(v.getId() == binding.tvToRegister.getId()){
             onLinkedDaftarClick();
+        }else if(v.getId() == binding.ivEyePassword.getId()){
+            onButtonShowPasswordClick();
         }
     }
 

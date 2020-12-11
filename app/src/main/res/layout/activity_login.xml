@@ -118,8 +118,19 @@
 
         </LinearLayout>
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/btLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutPassword" />
+
         <Button
-            android:id="@+id/bt_login"
+            android:id="@+id/btLogin"
             android:layout_width="266dp"
             android:layout_height="50dp"
             android:layout_marginTop="200dp"
@@ -156,9 +167,9 @@
             android:textSize="13sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@id/bt_login"
+            app:layout_constraintStart_toEndOf="@id/btLogin"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bt_login" />
+            app:layout_constraintTop_toBottomOf="@+id/btLogin" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
