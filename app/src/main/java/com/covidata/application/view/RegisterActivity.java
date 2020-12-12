@@ -50,12 +50,12 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
     @Override
     public void startLoading() {
         binding.btRegister.setEnabled(false);
-        binding.progressBar.setVisibility(View.VISIBLE);
+        binding.progressBarRegister.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void endLoading() {
-        binding.progressBar.setVisibility(View.GONE);
+        binding.progressBarRegister.setVisibility(View.GONE);
         binding.btRegister.setEnabled(true);
     }
 

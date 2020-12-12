@@ -20,7 +20,8 @@ public class LoginPresenter implements LoginContract.Presenter {
     @Override
     public void login(String username, String password) {
         view.startLoading();
-        interactor.requestLogin(username, bcryptPassword(password), new RequestCallback<LoginResponse>() {
+
+        interactor.requestLogin(username, password, new RequestCallback<LoginResponse>() {
 //            @Override
 //            public void requestSuccess(LoginResponse data) {
 //                view.endLoading();
@@ -44,8 +45,7 @@ public class LoginPresenter implements LoginContract.Presenter {
     }
 
     public String bcryptPassword(String password) {
-        String  originalPassword = "password";
-        String generatedSecuredPassword = BCrypt.hashpw(originalPassword, BCrypt.gensalt(12));
+        String generatedSecuredPassword = BCrypt.hashpw(password, BCrypt.gensalt(12));
 
         return generatedSecuredPassword;
     }

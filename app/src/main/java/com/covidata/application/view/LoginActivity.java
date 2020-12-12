@@ -39,12 +39,14 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
     @Override
     public void startLoading() {
-        //binding.progressBar.setVisibility(View.VISIBLE);
+        binding.btLogin.setEnabled(false);
+        binding.progressBarLogin.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void endLoading() {
-        //binding.progressBar.setVisibility(View.GONE);
+        binding.progressBarLogin.setVisibility(View.GONE);
+        binding.btLogin.setEnabled(true);
     }
 
     @Override
@@ -88,7 +90,20 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
     }
 
     public void onButtonLoginClick(){
-        presenter.login(binding.etEmail.getText().toString(), binding.etPassword.getText().toString());
+        if(binding.etEmail.getText().toString().trim().length() == 0 && binding.etPassword.getText().toString().trim().length() == 0)
+            Toast.makeText(getApplicationContext(), "email & password cannot be null",
+                    Toast.LENGTH_SHORT).show();
+        else{
+            if(binding.etEmail.getText().toString().trim().length() == 0)
+                Toast.makeText(getApplicationContext(), "email cannot be null",
+                        Toast.LENGTH_SHORT).show();
+            if(binding.etPassword.getText().toString().trim().length() == 0)
+                Toast.makeText(getApplicationContext(), "password cannot be null",
+                        Toast.LENGTH_SHORT).show();
+        }
+
+        if(binding.etPassword.getText().toString().trim().length() != 0 && binding.etEmail.getText().toString().trim().length() != 0)
+            presenter.login(binding.etEmail.getText().toString(), binding.etPassword.getText().toString());
     }
 
     private void makeToast(String message){

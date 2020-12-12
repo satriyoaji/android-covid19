@@ -26,7 +26,6 @@ public class RegisterPresenter implements RegisterContract.Presenter{
             interactor.requestRegister(name, email, bcryptPassword(password), confirmPassword, new RequestCallback<RegisterResponse>() {
                 @Override
                 public void requestSucceded(String docId) {
-                    Log.d("doc id: ", docId);
                     view.endLoading();
                     interactor.saveToken(docId);
                     view.registerSuccess("You're successfully registered");
@@ -45,8 +44,7 @@ public class RegisterPresenter implements RegisterContract.Presenter{
 
     @Override
     public String bcryptPassword(String password) {
-        String  originalPassword = "password";
-        String generatedSecuredPassword = BCrypt.hashpw(originalPassword, BCrypt.gensalt(12));
+        String generatedSecuredPassword = BCrypt.hashpw(password, BCrypt.gensalt(12));
 
         return generatedSecuredPassword;
     }
