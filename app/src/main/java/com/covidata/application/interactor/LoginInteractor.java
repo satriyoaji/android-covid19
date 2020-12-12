@@ -11,6 +11,7 @@ import com.covidata.application.api_response.LoginResponse;
 import com.covidata.application.callback.RequestCallback;
 import com.covidata.application.constant.ApiConstant;
 import com.covidata.application.contract.LoginContract;
+import com.covidata.application.util.BCrypt;
 import com.covidata.application.util.SharedPreferencesUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -37,19 +38,27 @@ public class LoginInteractor implements LoginContract.Interactor {
     }
 
     @Override
-    public void requestLogin(String username, String password, final RequestCallback<LoginResponse> requestCallback) {
+    public void requestLogin(final String username, final String password, final RequestCallback<LoginResponse> requestCallback) {
         db.collection("users")
             .whereEqualTo("email", username)
-            .whereEqualTo("password", password)
             .get()
             .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                     if (task.isSuccessful()) {
-                            List<DocumentSnapshot> docs = task.getResult().getDocuments();
-                            Log.d("hasil", String.valueOf(docs.size()));
-                        for (QueryDocumentSnapshot document : task.getResult()) {
+                        List<DocumentSnapshot> docs = task.getResult().getDocuments();
+                        boolean flag = false;
+                        for (DocumentSnapshot document : task.getResult()) {
                             Log.d(TAG, "datas: " + document.getId() + " => " + document.getData());
+                            for (DocumentSnapshot doc: docs) {
+                                if(BCrypt.checkpw(password, (String) doc.get("password"))){
+                                    flag = true;
+                                }
+                            }
+                            if(flag)
+                                requestCallback.requestSucceded(document.getId());
+                            else
+                                requestCallback.requestFailed("username or email incorrect");
                         }
                     } else {
                         Log.d(TAG, "Error getting documents: ", task.getException());
