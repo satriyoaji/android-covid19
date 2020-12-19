@@ -1,6 +1,7 @@
 package com.covidata.application.contract;
 
 import com.covidata.application.api_response.LoginResponse;
+import com.covidata.application.callback.AuthRequestCallback;
 import com.covidata.application.callback.RequestCallback;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -18,7 +19,7 @@ public interface LoginContract {
     }
 
     interface Interactor {
-        void requestLogin(String username, String password, RequestCallback<LoginResponse> requestCallback);
+        void requestLogin(String username, String password, AuthRequestCallback<LoginResponse> requestCallback);
         void saveToken(String token);
     }
 }

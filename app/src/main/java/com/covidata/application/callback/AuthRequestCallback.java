@@ -1,6 +1,6 @@
 package com.covidata.application.callback;
 
-public interface RequestCallback<T> {
-    void requestSuccess(T data);
+public interface AuthRequestCallback<T> {
+    void requestSuccess(String docId);
     void requestFailed(String errorMessage);
 }

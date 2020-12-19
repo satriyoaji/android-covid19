@@ -26,7 +26,7 @@ public class ListBookPresenter implements ListBookContract.Presenter {
 //            }
 
             @Override
-            public void requestSucceded(String docId) {
+            public void requestSuccess(List<Book> data) {
 
             }
 

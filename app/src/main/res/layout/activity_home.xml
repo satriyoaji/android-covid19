@@ -135,8 +135,7 @@
               android:layout_height="wrap_content"
               app:layout_constraintTop_toTopOf="parent"
               app:layout_constraintStart_toStartOf="parent"
-              android:layout_marginStart="8dp"
-              android:layout_marginTop="8dp"
+              app:layout_constraintEnd_toStartOf="@+id/cv_positif"
               android:foreground="?android:attr/selectableItemBackground"
               app:cardCornerRadius="4dp">
 
@@ -171,9 +170,11 @@
           <androidx.cardview.widget.CardView
               android:id="@+id/cv_positif"
               android:layout_width="140dp"
+              android:layout_marginStart="12dp"
               android:layout_height="wrap_content"
               app:layout_constraintTop_toTopOf="@id/cv_sembuh"
               app:layout_constraintBottom_toBottomOf="@id/cv_sembuh"
+              app:layout_constraintStart_toEndOf="@id/cv_sembuh"
               app:layout_constraintEnd_toEndOf="parent"
               android:foreground="?android:attr/selectableItemBackground"
               app:cardCornerRadius="4dp">
@@ -197,7 +198,7 @@
                   android:id="@+id/tv_nilai_positif"
                   android:textSize="22sp"
                   android:layout_marginTop="4dp"
-                  android:textColor="#2B0202"
+                  android:textColor="#EF0000"
                   android:textStyle="bold"
                   android:text="@string/nilai_positif"
                   android:layout_width="match_parent"
@@ -211,7 +212,7 @@
               android:layout_height="wrap_content"
               app:layout_constraintTop_toBottomOf="@id/cv_sembuh"
               app:layout_constraintStart_toStartOf="parent"
-              android:layout_marginStart="8dp"
+              app:layout_constraintEnd_toStartOf="@id/cv_meninggal"
               android:layout_marginTop="24dp"
               android:foreground="?android:attr/selectableItemBackground"
               app:cardCornerRadius="4dp">
@@ -250,6 +251,8 @@
               app:layout_constraintTop_toTopOf="@id/cv_perawatan"
               app:layout_constraintBottom_toBottomOf="@id/cv_perawatan"
               app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toEndOf="@id/cv_perawatan"
+              android:layout_marginStart="12dp"
               android:foreground="?android:attr/selectableItemBackground"
               app:cardCornerRadius="4dp">
 
@@ -272,7 +275,7 @@
                   android:id="@+id/tv_nilai_meninggal"
                   android:textSize="22sp"
                   android:layout_marginTop="4dp"
-                  android:textColor="#EF0000"
+                  android:textColor="#2B0202"
                   android:textStyle="bold"
                   android:text="@string/nilai_meninggal"
                   android:layout_width="match_parent"

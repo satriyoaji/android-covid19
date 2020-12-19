@@ -9,6 +9,7 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.covidata.application.api_response.RegisterResponse;
+import com.covidata.application.callback.AuthRequestCallback;
 import com.covidata.application.callback.RequestCallback;
 import com.covidata.application.constant.ApiConstant;
 import com.covidata.application.contract.RegisterContract;
@@ -34,7 +35,7 @@ public class RegisterInteractor implements RegisterContract.Interactor{
 
     @Override
     public void requestRegister(String name, String email, String password, String confirmPassword,
-                                final RequestCallback<RegisterResponse> requestCallback) {
+                                final AuthRequestCallback<RegisterResponse> requestCallback) {
 
         Map<String, Object> user = new HashMap<>();
         user.put("name", name);
@@ -49,7 +50,7 @@ public class RegisterInteractor implements RegisterContract.Interactor{
                 @Override
                 public void onSuccess(DocumentReference documentReference) {
                     Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                    requestCallback.requestSucceded(documentReference.getId());
+                    requestCallback.requestSuccess(documentReference.getId());
                 }
             })
             .addOnFailureListener(new OnFailureListener() {

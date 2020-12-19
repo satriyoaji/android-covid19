@@ -4,13 +4,16 @@ public class User {
     private String name;
     private String email;
     private String password;
-    private String residenceNumber;
+    private String note;
 
-    public User(String name, String email, String password, String residenceNumber) {
+    public User(String name, String email, String password, String note) {
         this.name = name;
         this.email = email;
         this.password = password;
-        this.residenceNumber = residenceNumber;
+        this.note = note;
+    }
+
+    public User(){
     }
 
     public String getName() {
@@ -25,7 +28,7 @@ public class User {
         return password;
     }
 
-    public String getResidenceNumber() {
-        return residenceNumber;
+    public String getNote() {
+        return note;
     }
 }

@@ -15,7 +15,7 @@
     <string name="welcome">Welcome</string>
 
     <!-- Home -->
-    <string name="nama_saya">Nama Saya</string>
+    <string name="nama_saya"> </string>
     <string name="notes_user">Target Anda hari ini adalah menjaga pola pikir positif dan tersenyum kepada semua orang yang Anda temui.</string>
     <string name="last_updated">Pembaruan terakhir pada 31-03-2020, 8:00 AM</string>
     <string name="title_content">Data Covid-19 Indonesia</string>

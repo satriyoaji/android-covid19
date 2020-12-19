@@ -5,6 +5,7 @@ import android.widget.Toast;
 
 import com.covidata.application.api_response.LoginResponse;
 import com.covidata.application.api_response.RegisterResponse;
+import com.covidata.application.callback.AuthRequestCallback;
 import com.covidata.application.callback.RequestCallback;
 import com.covidata.application.contract.RegisterContract;
 import com.covidata.application.util.BCrypt;
@@ -23,9 +24,9 @@ public class RegisterPresenter implements RegisterContract.Presenter{
     public void register(String name, String email, String password, String confirmPassword) {
         view.startLoading();
         if (password.equals(confirmPassword)){
-            interactor.requestRegister(name, email, bcryptPassword(password), confirmPassword, new RequestCallback<RegisterResponse>() {
+            interactor.requestRegister(name, email, bcryptPassword(password), confirmPassword, new AuthRequestCallback<RegisterResponse>() {
                 @Override
-                public void requestSucceded(String docId) {
+                public void requestSuccess(String docId) {
                     view.endLoading();
                     interactor.saveToken(docId);
                     view.registerSuccess("You're successfully registered");

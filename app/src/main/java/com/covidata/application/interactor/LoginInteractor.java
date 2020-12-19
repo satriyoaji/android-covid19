@@ -8,6 +8,7 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.covidata.application.api_response.LoginResponse;
+import com.covidata.application.callback.AuthRequestCallback;
 import com.covidata.application.callback.RequestCallback;
 import com.covidata.application.constant.ApiConstant;
 import com.covidata.application.contract.LoginContract;
@@ -38,7 +39,7 @@ public class LoginInteractor implements LoginContract.Interactor {
     }
 
     @Override
-    public void requestLogin(final String username, final String password, final RequestCallback<LoginResponse> requestCallback) {
+    public void requestLogin(final String username, final String password, final AuthRequestCallback<LoginResponse> requestCallback) {
         db.collection("users")
             .whereEqualTo("email", username)
             .get()
@@ -56,7 +57,7 @@ public class LoginInteractor implements LoginContract.Interactor {
                                 }
                             }
                             if(flag)
-                                requestCallback.requestSucceded(document.getId());
+                                requestCallback.requestSuccess(document.getId());
                             else
                                 requestCallback.requestFailed("username or email incorrect");
                         }

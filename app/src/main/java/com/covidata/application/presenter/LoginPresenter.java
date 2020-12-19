@@ -1,6 +1,7 @@
 package com.covidata.application.presenter;
 
 import com.covidata.application.api_response.LoginResponse;
+import com.covidata.application.callback.AuthRequestCallback;
 import com.covidata.application.callback.RequestCallback;
 import com.covidata.application.contract.LoginContract;
 import com.covidata.application.interactor.LoginInteractor;
@@ -21,7 +22,7 @@ public class LoginPresenter implements LoginContract.Presenter {
     public void login(String username, String password) {
         view.startLoading();
 
-        interactor.requestLogin(username, password, new RequestCallback<LoginResponse>() {
+        interactor.requestLogin(username, password, new AuthRequestCallback<LoginResponse>() {
 //            @Override
 //            public void requestSuccess(LoginResponse data) {
 //                view.endLoading();
@@ -30,10 +31,11 @@ public class LoginPresenter implements LoginContract.Presenter {
 //            }
 
             @Override
-            public void requestSucceded(String docId) {
+            public void requestSuccess(String docId) {
                 view.endLoading();
                 view.loginSuccess("You're successfully logged in!");
                 interactor.saveToken(docId);
+
             }
 
             @Override
