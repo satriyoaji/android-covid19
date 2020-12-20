@@ -66,29 +66,6 @@ public class LoginInteractor implements LoginContract.Interactor {
                     }
                 }
             });
-//        AndroidNetworking.post(ApiConstant.BASE_URL + "auth/login")
-//                .addBodyParameter("email", username)
-//                .addBodyParameter("password", password)
-//                .build()
-//                .getAsObject(LoginResponse.class, new ParsedRequestListener<LoginResponse>() {
-//                    @Override
-//                    public void onResponse(LoginResponse response) {
-//                        if(response == null){
-//                            requestCallback.requestFailed("Null Response");
-//                        }
-//                        else if(response.success){
-////                            requestCallback.requestSuccess(response);
-//                        }
-//                        else {
-//                            requestCallback.requestFailed(response.message);
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onError(ANError anError) {
-//                        requestCallback.requestFailed(anError.getErrorDetail());
-//                    }
-//                });
     }
 
     @Override

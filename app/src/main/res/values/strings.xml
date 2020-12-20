@@ -12,7 +12,7 @@
 
     <!-- Register -->
     <string name="register">Register</string>
-    <string name="welcome">Welcome</string>
+    <string name="welcome"></string>
 
     <!-- Home -->
     <string name="nama_saya"> </string>
@@ -31,7 +31,7 @@
 
     <!-- Province Map -->
     <string name="title_activity_province_maps">Map</string>
-    <string name="rekap_kasus_hari_ini">Rekap Kasus Hari ini di Indonesia</string>
+    <string name="rekap_kasus_hari_ini">Data terbaru di Provinsi ...</string>
     <string name="daftar_link">Belum punya akun ?</string>
     <string name="login_link">Sudah punya akun ?</string>
 

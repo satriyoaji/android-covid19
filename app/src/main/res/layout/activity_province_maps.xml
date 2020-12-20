@@ -104,7 +104,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="@string/positif_label"
-                        android:textColor="@color/soft_cyan"
+                        android:textColor="@color/colorAccent"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -154,7 +154,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="@string/meninggal_label"
-                        android:textColor="@color/soft_cyan"
+                        android:textColor="@color/colorOnSurface"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -179,7 +179,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="@string/perawatan_label"
-                        android:textColor="@color/soft_cyan"
+                        android:textColor="@color/dark_blue"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -224,6 +224,7 @@
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mainFeature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_awesome_map_marker_alt"

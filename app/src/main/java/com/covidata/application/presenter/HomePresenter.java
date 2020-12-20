@@ -1,7 +1,10 @@
 package com.covidata.application.presenter;
 
 
+import android.util.Log;
+
 import com.covidata.application.api_response.LoginResponse;
+import com.covidata.application.api_response.NationalDataResponse;
 import com.covidata.application.callback.RequestCallback;
 import com.covidata.application.contract.HomeContract;
 import com.covidata.application.model.User;
@@ -26,8 +29,19 @@ public class HomePresenter implements HomeContract.Presenter {
     }
 
     @Override
-    public void requestGlobalData() {
+    public void requestNationalData() {
+        interactor.requestNationalData(new RequestCallback<NationalDataResponse>() {
+            @Override
+            public void requestSuccess(NationalDataResponse data) {
+                view.setTotalData(data.update.total);
+                view.setUpdateData(data.update.penambahan);
+            }
 
+            @Override
+            public void requestFailed(String errorMessage) {
+                view.showError(errorMessage);
+            }
+        });
     }
 
     @Override
@@ -43,10 +57,5 @@ public class HomePresenter implements HomeContract.Presenter {
                 view.showError(errorMessage);
             }
         });
-    }
-
-    @Override
-    public void logout() {
-
     }
 }
