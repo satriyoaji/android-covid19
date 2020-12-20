@@ -216,7 +216,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:background="@color/white"
+            android:background="@drawable/bottom_nav_rounded"
             android:backgroundTint="@color/white"
             map:menu="@menu/bottom_nav_menu"
             android:textAlignment="center" />
