@@ -7,12 +7,20 @@
         android:icon="@drawable/iphone_8_plus__tab_bar"
         android:enabled="true"
         app:showAsAction="ifRoom"
-        android:title="home" />
+        android:title="home">
+        <stroke
+            android:width="32dp"
+            android:color="#000" />
+    </item>
     <item
         android:id="@+id/btnUser"
         android:icon="@drawable/icons__user"
         android:enabled="true"
         app:showAsAction="ifRoom"
-        android:title="user" />
+        android:title="user">
+        <stroke
+            android:width="32dp"
+            android:color="#000" />
+    </item>
 
 </menu>
