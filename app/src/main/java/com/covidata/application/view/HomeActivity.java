@@ -43,6 +43,15 @@ public class HomeActivity extends AppCompatActivity  implements HomeContract.Vie
     }
 
     private void initView() {
+        binding.mapMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent time = new Intent(HomeActivity.this, ProvinceMapsActivity.class);
+                startActivity(time);
+                finish();
+            }
+        });
+
         if(isLoggedIn){
             getGreetings();
             presenter.requestSelfData();
@@ -53,9 +62,19 @@ public class HomeActivity extends AppCompatActivity  implements HomeContract.Vie
 
     @Override
     public void onClick(View view) {
-        if(view.getId() == binding.mainFeature.getId()){
-            Intent provincePage = new Intent(HomeActivity.this,ProvinceMapsActivity.class);
-            startActivity(provincePage);
+        //
+    }
+
+    @Override
+    public void bottomBarAction(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.btnHome:
+                break;
+            case R.id.btnUser:
+                Intent profile = new Intent(HomeActivity.this,ProfileActivity.class);
+                startActivity(profile);
+                finish();
+                break;
         }
     }
 
@@ -124,15 +143,5 @@ public class HomeActivity extends AppCompatActivity  implements HomeContract.Vie
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         bottomBarAction(item);
         return false;
-    }
-
-    @Override
-    public void bottomBarAction(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.btnHome:
-                break;
-            case R.id.btnUser:
-                break;
-        }
     }
 }
