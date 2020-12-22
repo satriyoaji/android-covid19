@@ -4,6 +4,7 @@ import com.covidata.application.api_response.LoginResponse;
 import com.covidata.application.api_response.NationalDataResponse;
 import com.covidata.application.callback.RequestCallback;
 import com.covidata.application.model.NationalData;
+import com.covidata.application.model.NationalDataDetail;
 import com.covidata.application.model.TotalData;
 import com.covidata.application.model.User;
 
@@ -18,6 +19,7 @@ public interface HomeContract {
         void showError(String errorMessage);
         void setSelfData(User user);
         void setUpdateData(TotalData update);
+        void setUpdateDetailData(NationalDataDetail data);
         void setTotalData(TotalData total);
     }
 

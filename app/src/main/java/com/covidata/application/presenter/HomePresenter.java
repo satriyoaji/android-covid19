@@ -35,6 +35,7 @@ public class HomePresenter implements HomeContract.Presenter {
             public void requestSuccess(NationalDataResponse data) {
                 view.setTotalData(data.update.total);
                 view.setUpdateData(data.update.penambahan);
+                view.setUpdateDetailData(data.data);
             }
 
             @Override

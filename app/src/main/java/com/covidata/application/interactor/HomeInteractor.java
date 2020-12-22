@@ -7,13 +7,10 @@ import androidx.annotation.NonNull;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.ParsedRequestListener;
-import com.covidata.application.api_response.LoginResponse;
 import com.covidata.application.api_response.NationalDataResponse;
 import com.covidata.application.callback.RequestCallback;
 import com.covidata.application.contract.HomeContract;
-import com.covidata.application.model.NationalData;
 import com.covidata.application.model.User;
-import com.covidata.application.util.BCrypt;
 import com.covidata.application.util.SharedPreferencesUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -64,23 +61,23 @@ public class HomeInteractor implements HomeContract.Interactor {
     @Override
     public void requestNationalData(final RequestCallback<NationalDataResponse> requestCallback) {
         AndroidNetworking.get("https://data.covid19.go.id/public/api/update.json")
-                .build()
-                .getAsObject(NationalDataResponse.class, new ParsedRequestListener<NationalDataResponse>() {
-                    @Override
-                    public void onResponse(NationalDataResponse response) {
-                        if(response == null){
-                            requestCallback.requestFailed("Null Response");
-                        }
-                        else {
-                            requestCallback.requestSuccess(response);
-                        }
+            .build()
+            .getAsObject(NationalDataResponse.class, new ParsedRequestListener<NationalDataResponse>() {
+                @Override
+                public void onResponse(NationalDataResponse response) {
+                    if(response == null){
+                        requestCallback.requestFailed("Null Response");
                     }
+                    else {
+                        requestCallback.requestSuccess(response);
+                    }
+                }
 
-                    @Override
-                    public void onError(ANError anError) {
-                        requestCallback.requestFailed(anError.getErrorDetail());
-                    }
-                });
+                @Override
+                public void onError(ANError anError) {
+                    requestCallback.requestFailed(anError.getErrorDetail());
+                }
+            });
     }
 
     public String getToken() {

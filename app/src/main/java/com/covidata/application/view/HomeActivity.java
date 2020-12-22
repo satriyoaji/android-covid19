@@ -14,6 +14,7 @@ import com.covidata.application.R;
 import com.covidata.application.contract.HomeContract;
 import com.covidata.application.databinding.ActivityHomeBinding;
 import com.covidata.application.interactor.HomeInteractor;
+import com.covidata.application.model.NationalDataDetail;
 import com.covidata.application.model.TotalData;
 import com.covidata.application.model.User;
 import com.covidata.application.presenter.HomePresenter;
@@ -89,6 +90,11 @@ public class HomeActivity extends AppCompatActivity  implements HomeContract.Vie
         binding.tvTambahPositif.setText("Penambahan: + "+update.getJumlah_positif());
         binding.tvTambahPerawatan.setText("Penambahan: + "+update.getJumlah_dirawat());
         binding.tvTambahMeninggal.setText("Penambahan: + "+update.getJumlah_meninggal());
+    }
+
+    @Override
+    public void setUpdateDetailData(NationalDataDetail data) {
+        binding.tvTotalSpecimen.setText(String.valueOf(data.total_spesimen));
     }
 
     @Override
