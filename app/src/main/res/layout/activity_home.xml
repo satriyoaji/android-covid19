@@ -93,8 +93,10 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/wrapper_1"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -529,7 +531,6 @@
           android:background="@drawable/bottom_nav_rounded"
           android:backgroundTint="@color/dark_blue"
           app:itemBackground="@color/white"
-          app:itemIconTint="@android:color/black"
           app:menu="@menu/bottom_nav_menu"
           android:textAlignment="center" />
     </LinearLayout>
@@ -537,7 +538,7 @@
         android:id="@+id/mapMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

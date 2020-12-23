@@ -203,35 +203,43 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <com.google.android.material.bottomappbar.BottomAppBar
+        <LinearLayout
+            android:orientation="horizontal"
             android:id="@+id/bottom_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
+            android:layout_gravity="bottom|center_horizontal"
             map:fabCradleMargin="10dp"
             android:background="@color/white"
-            android:backgroundTint="@color/white">
+            android:backgroundTint="@color/white"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="BottomAppBar">
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottomNav"
                 map:labelVisibilityMode="unlabeled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
                 android:background="@drawable/bottom_nav_rounded"
                 android:backgroundTint="@color/white"
                 map:menu="@menu/bottom_nav_menu"
                 android:textAlignment="center" />
 
-        </com.google.android.material.bottomappbar.BottomAppBar>
+        </LinearLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/mainFeature"
+            android:id="@+id/mapMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
             android:src="@drawable/icon_awesome_map_marker_alt"
-            map:layout_anchor="@id/bottom_menu">
+            map:layout_anchorGravity="center_horizontal"
+            map:layout_anchor="@id/bottom_menu"/>
 
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
