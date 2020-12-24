@@ -6,14 +6,18 @@
 
     <data/>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/gray_background_profile">
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="620dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:fillViewport="true">
 
             <LinearLayout
@@ -60,7 +64,7 @@
                                 android:fontFamily="@font/montserrat"
                                 android:text="@string/akun"
                                 android:textColor="@color/dark_blue"
-                                android:textSize="25sp"
+                                android:textSize="23sp"
                                 android:textStyle="bold"
                                 app:layout_constraintStart_toEndOf="@+id/iv_virus"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -70,8 +74,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvHeader"
-                    android:layout_width="350dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -129,8 +134,9 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvBody"
-                    android:layout_width="350dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -149,7 +155,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
-                            android:paddingHorizontal="30dp"
+                            android:paddingHorizontal="20dp"
                             android:paddingVertical="15dp">
 
                             <ImageView
@@ -193,7 +199,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
-                            android:paddingHorizontal="30dp"
+                            android:paddingHorizontal="20dp"
                             android:paddingVertical="15dp">
 
                             <ImageView
@@ -237,7 +243,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
-                            android:paddingHorizontal="30dp"
+                            android:paddingHorizontal="20dp"
                             android:paddingVertical="15dp">
 
                             <ImageView
@@ -278,11 +284,12 @@
 
                         <ImageView
                             android:id="@+id/btEdit"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginTop="20dp"
                             android:layout_marginBottom="15dp"
+                            android:layout_marginHorizontal="20dp"
                             app:srcCompat="@drawable/bt_edit" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -290,7 +297,7 @@
                 <ImageView
                     android:id="@+id/btLogout"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginVertical="30dp"
                     app:srcCompat="@drawable/bt_logout" />
@@ -298,13 +305,17 @@
             </LinearLayout>
         </ScrollView>
 
-        <com.google.android.material.bottomappbar.BottomAppBar
+        <LinearLayout
+            android:orientation="horizontal"
             android:id="@+id/bottom_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             app:fabCradleMargin="10dp"
             android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:backgroundTint="@color/white">
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -312,20 +323,23 @@
                 app:labelVisibilityMode="unlabeled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
                 android:background="@color/white"
                 android:backgroundTint="@color/white"
                 app:menu="@menu/bottom_nav_menu"
                 android:textAlignment="center" />
 
-        </com.google.android.material.bottomappbar.BottomAppBar>
+        </LinearLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             android:src="@drawable/icon_awesome_map_marker_alt"
             app:layout_anchor="@id/bottom_menu">
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
