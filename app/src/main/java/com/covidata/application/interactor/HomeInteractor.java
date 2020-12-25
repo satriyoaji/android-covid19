@@ -80,7 +80,7 @@ public class HomeInteractor implements HomeContract.Interactor {
             });
     }
 
-    public String getToken() {
+    private String getToken() {
         return sharedPreferencesUtil.getToken();
     }
 

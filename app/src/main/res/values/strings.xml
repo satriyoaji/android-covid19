@@ -71,4 +71,5 @@
     <string name="kota_kabupaten">Bandung</string>
     <string name="provinsi_label">Provinsi</string>
     <string name="provinsi">Jawa Barat</string>
+    <string name="save">SAVE</string>
 </resources>

@@ -33,7 +33,8 @@ public class ProvinceMapsActivity extends AppCompatActivity implements OnMapRead
         GoogleMap.OnMarkerClickListener,
         ProvinceMapContract.View,
         View.OnClickListener,
-        BottomNavigationView.OnNavigationItemSelectedListener {
+        BottomNavigationView.OnNavigationItemSelectedListener,
+        BaseAuthenticatedView{
 
     private GoogleMap mMap;
     private ProvinceMapContract.Presenter presenter;
@@ -112,6 +113,12 @@ public class ProvinceMapsActivity extends AppCompatActivity implements OnMapRead
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        bottomBarAction(item);
+        return false;
+    }
+
+    @Override
+    public void bottomBarAction(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.btnHome:
                 Intent home = new Intent(ProvinceMapsActivity.this, HomeActivity.class);
@@ -124,7 +131,5 @@ public class ProvinceMapsActivity extends AppCompatActivity implements OnMapRead
                 finish();
                 break;
         }
-
-        return false;
     }
 }

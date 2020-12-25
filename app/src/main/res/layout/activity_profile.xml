@@ -4,7 +4,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data/>
+    <data>
+        <variable
+            name="user"
+            type="com.covidata.application.model.User" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -108,12 +112,13 @@
                             android:layout_marginLeft="15dp"
                             android:orientation="vertical">
 
-                            <TextView
-                                android:id="@+id/tvName"
+                            <EditText
+                                android:id="@+id/etName"
+                                android:enabled="false"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/open_sans"
-                                android:text="@string/name_profile"
+                                android:text="@{user.name}"
                                 android:textColor="@color/dark_gray"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
@@ -182,12 +187,13 @@
                                     android:textSize="16sp"
                                     android:textStyle="bold" />
 
-                                <TextView
-                                    android:id="@+id/tvEmail"
+                                <EditText
+                                    android:id="@+id/etEmail"
+                                    android:enabled="false"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/open_sans"
-                                    android:text="@string/email"
+                                    android:text="@{user.email}"
                                     android:textColor="@color/dark_gray"
                                     android:textSize="12sp" />
 
@@ -226,12 +232,13 @@
                                     android:textSize="16sp"
                                     android:textStyle="bold" />
 
-                                <TextView
-                                    android:id="@+id/tvAlamat"
+                                <EditText
+                                    android:id="@+id/etAlamat"
+                                    android:enabled="false"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/open_sans"
-                                    android:text="@string/alamat"
+                                    android:text="@{user.address}"
                                     android:textColor="@color/dark_gray"
                                     android:textSize="12sp" />
 
@@ -270,18 +277,29 @@
                                     android:textSize="16sp"
                                     android:textStyle="bold" />
 
-                                <TextView
-                                    android:id="@+id/tvProfile"
+                                <EditText
+                                    android:id="@+id/etNote"
+                                    android:enabled="false"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/open_sans"
-                                    android:text="@string/profile"
+                                    android:text="@{user.note}"
                                     android:textColor="@color/dark_gray"
                                     android:textSize="12sp" />
 
                             </LinearLayout>
                         </LinearLayout>
 
+                        <ImageView
+                            android:id="@+id/btSave"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginHorizontal="20dp"
+                            app:srcCompat="@drawable/bt_save" />
                         <ImageView
                             android:id="@+id/btEdit"
                             android:layout_width="match_parent"
@@ -291,6 +309,7 @@
                             android:layout_marginBottom="15dp"
                             android:layout_marginHorizontal="20dp"
                             app:srcCompat="@drawable/bt_edit" />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -331,6 +350,7 @@
         </LinearLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mapMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"

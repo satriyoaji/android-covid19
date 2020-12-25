@@ -23,7 +23,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.Calendar;
 
-public class HomeActivity extends AppCompatActivity  implements HomeContract.View, View.OnClickListener,
+public class HomeActivity extends AppCompatActivity implements HomeContract.View, View.OnClickListener,
         BottomNavigationView.OnNavigationItemSelectedListener,
         BaseAuthenticatedView{
     private HomeContract.Presenter presenter;
@@ -43,14 +43,7 @@ public class HomeActivity extends AppCompatActivity  implements HomeContract.Vie
     }
 
     private void initView() {
-        binding.mapMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent time = new Intent(HomeActivity.this, ProvinceMapsActivity.class);
-                startActivity(time);
-                finish();
-            }
-        });
+        binding.mapMenu.setOnClickListener(this);
 
         if(isLoggedIn){
             getGreetings();
@@ -62,7 +55,11 @@ public class HomeActivity extends AppCompatActivity  implements HomeContract.Vie
 
     @Override
     public void onClick(View view) {
-        //
+        if(view.getId() == binding.mapMenu.getId()){
+            Intent time = new Intent(HomeActivity.this, ProvinceMapsActivity.class);
+            startActivity(time);
+            finish();
+        }
     }
 
     @Override
